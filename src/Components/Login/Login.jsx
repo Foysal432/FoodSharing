@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import toast from "react-hot-toast";
-
+import { AiFillGooglePlusSquare } from "react-icons/ai";
 const Login = () => {
   const navigate =useNavigate()
   const {user,login} = useAuth()
@@ -103,13 +103,17 @@ const Login = () => {
           <p className="flex justify-center mt-6 font-sans text-sm antialiased font-light leading-normal text-inherit">
             Don't have an account?
             <a>
-              <Link to='/register' className="block ml-1 font-sans text-sm antialiased font-bold leading-normal text-pink-500">Sign up</Link>
-              
+              <Link to='/register' className="block ml-1 font-sans text-sm antialiased font-bold leading-normal text-pink-500">Sign up</Link> 
             </a>
           </p>
         </div>
      </form>
-  
+  <div>
+  <button className="btn btn-outline btn-success w-full">
+  GOOGLE
+<AiFillGooglePlusSquare className="text-3xl"></AiFillGooglePlusSquare>
+</button>
+  </div>
       </div>
          <div className="w-1/2">
          <img src="https://i.ibb.co/GJQWnJ8/6310507.jpg" alt="" />
