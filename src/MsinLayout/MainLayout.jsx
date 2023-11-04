@@ -1,13 +1,21 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import useAuth from "../Hooks/useAuth";
 
 const MainLayout = ({children}) => {
+  const {user,logout} =useAuth()
+
+  const handlelogout =()=>{
+    logout()
+    .then()
+    .catch()
+  }
     const MenuNav =<>
     <li><a><NavLink to='/' className={({isActive})=>isActive? "btn btn-outline btn-accent":"btn btn-ghost"} >Home</NavLink></a></li>
     <li><a><NavLink to='about' className={({isActive})=>isActive? "btn btn-outline btn-accent":"btn btn-ghost"}>Available Foods</NavLink></a></li>
     <li><a><NavLink to='about' className={({isActive})=>isActive? "btn btn-outline btn-accent":"btn btn-ghost"}>Add Food</NavLink></a></li>
     <li><a><NavLink to='about' className={({isActive})=>isActive? "btn btn-outline btn-accent":"btn btn-ghost"}>Manage My Foods</NavLink></a></li>
     <li><a><NavLink to='about' className={({isActive})=>isActive? "btn btn-outline btn-accent":"btn btn-ghost"}>My Food Request</NavLink></a></li>
-    <li><a><NavLink to='login' className={({isActive})=>isActive? "btn btn-outline btn-accent":"btn btn-ghost"}>Login</NavLink></a></li>
+    {/* <li><a><NavLink to='login' className={({isActive})=>isActive? "btn btn-outline btn-accent":"btn btn-ghost"}>Login</NavLink></a></li> */}
     </>
     return(
         <div>
@@ -31,6 +39,16 @@ const MainLayout = ({children}) => {
        }
         </ul>
       </div>
+      <div className="dropdown">
+  <label tabIndex={0} className=" ">{
+user ? <img className="w-1/3 mx-4 rounded-lg" src={user.photoURL} alt="" />:<img className="w-1/3" src="https://i.ibb.co/d0zDYB5/images.png" alt="" /> 
+}</label>
+  <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box">
+     {
+      user?  <li><a><button onClick={handlelogout}>Log Out</button></a></li>:<li><a><Link to='login'>Log In</Link></a></li>
+    }
+  </ul>
+</div>
    </div>
     </div>
     {/* Page content here */}
@@ -44,6 +62,7 @@ const MainLayout = ({children}) => {
         MenuNav
     }
     </ul>
+    
   </div>
 </div>
         </div>
