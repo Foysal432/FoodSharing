@@ -1,9 +1,8 @@
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import toast from "react-hot-toast";
 import { updateProfile } from "firebase/auth";
-import { Result } from "postcss";
 
 const Register = () => {
 // const navigate =useNavigate()
@@ -31,7 +30,7 @@ const Register = () => {
       })
       .then()
       .catch()
-      window.location.reload()
+    
 
       })
       .catch(error=>{
