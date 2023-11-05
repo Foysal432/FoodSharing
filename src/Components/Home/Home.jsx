@@ -13,7 +13,7 @@ import { Pagination } from 'swiper/modules';
 
 const Home = () => {
     return (
-        <div className='mt-5'>
+        <div className='mt-5 bg-green-400'>
             <div className="max-w-6xl mx-auto">
          <div className='h-96'>
          <Swiper
