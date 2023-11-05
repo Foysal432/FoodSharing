@@ -12,6 +12,7 @@ import Login from './Components/Login/Login';
 import Register from './Pages/Register/Register';
 import Provider from './config/Provider';
 import { Toaster } from 'react-hot-toast';
+import AddFood from './Pages/AddFood/AddFood';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path:'register',
     element:<Register></Register>
+  },
+  {
+    path:'/addfood',
+    element:<AddFood></AddFood>
   }
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
