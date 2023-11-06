@@ -7,6 +7,7 @@
       "foodquantity": 5,
       "pickuplocation": "123 Main Street",
       "expiredtime": "2023-11-10",
+      "email":"jhon@gmail.com",
       "additionalnotes": "Gluten-free pasta, canned sauce",
       "foodstatus": "Available"
     },
@@ -18,6 +19,7 @@
       "foodquantity": 10,
       "pickuplocation": "456 Elm Street",
       "expiredtime": "2023-11-12",
+      "email":"jhon@gmail.com",
       "additionalnotes": "Assorted fresh fruits",
       "foodstatus": "Available"
     },
@@ -29,6 +31,7 @@
       "foodquantity": 8,
       "pickuplocation": "789 Oak Avenue",
       "expiredtime": "2023-11-09",
+      "email":"foysalarham69@gmail.com",
       "additionalnotes": "Canned vegetable soup",
       "foodstatus": "Claimed"
     },
@@ -40,6 +43,7 @@
       "foodquantity": 15,
       "pickuplocation": "1010 Maple Drive",
       "expiredtime": "2023-11-11",
+      "email":"jhon@gmail.com",
       "additionalnotes": "Freshly baked whole wheat bread",
       "foodstatus": "Available"
     },
@@ -51,6 +55,7 @@
       "foodquantity": 12,
       "pickuplocation": "1313 Pine Lane",
       "expiredtime": "2023-11-08",
+      "email":"foysalarham69@gmail.com",
       "additionalnotes": "Assorted fresh Pizza",
       "foodstatus": "Available"
     },
@@ -62,6 +67,7 @@
       "foodquantity": 7,
       "pickuplocation": "1515 Cedar Road",
       "expiredtime": "2023-11-13",
+      "email":"foysalarham69@gmail.com",
       "additionalnotes": "Homemade cookies and brownies",
       "foodstatus": "Available"
     },
@@ -73,6 +79,7 @@
       "foodquantity": 20,
       "pickuplocation": "2020 Oak Street",
       "expiredtime": "2023-11-14",
+      "email":"jhon@gmail.com",
       "additionalnotes": "Various brands of Cake",
       "foodstatus": "Available"
     }

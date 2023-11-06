@@ -9,10 +9,12 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 // import required modules
 import { Pagination } from 'swiper/modules';
+import Featured from '../Featured/Featured';
 
 
 const Home = () => {
     return (
+      <div>
         <div className='mt-5 bg-green-400'>
             <div className="max-w-6xl mx-auto">
          <div className='h-96'>
@@ -31,6 +33,8 @@ const Home = () => {
       </Swiper>
          </div>
             </div>
+        </div>
+        <Featured></Featured>
         </div>
     );
 };
