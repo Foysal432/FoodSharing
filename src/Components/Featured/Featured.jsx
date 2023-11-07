@@ -1,39 +1,28 @@
+import { useEffect, useState } from "react";
+import AFeatured from "./AFeatured";
+import { Link } from "react-router-dom";
+import { AiOutlineArrowRight } from "react-icons/ai";
+
 const Featured = () => {
+  const [fproducts,setFproduct]=useState()
+  useEffect(()=>{
+    fetch('http://localhost:5000/addfoods?sortField=foodquantity&sortOrder=desc')
+    .then(res=>res.json())
+    .then(data=>setFproduct(data))
+  },[])
+  console.log(fproducts);
     return(
         <div>
-            <div className="relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border">
-  <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg h-80 rounded-xl bg-clip-border">
-    <img src="/img/team-3.jpg" alt="profile-picture" />
-  </div>
-  <div className="p-6 text-center">
-    <h4 className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-      Natalie Paisley
-    </h4>
-    <p className="block font-sans text-base antialiased font-medium leading-relaxed text-transparent bg-gradient-to-tr from-pink-600 to-pink-400 bg-clip-text">
-      CEO / Co-Founder
-    </p>
-  </div>
-  <div className="flex justify-center p-6 pt-2 gap-7">
-    <a
-      href="#facebook"
-      className="block font-sans text-xl antialiased font-normal leading-relaxed text-transparent bg-gradient-to-tr from-blue-600 to-blue-400 bg-clip-text"
-    >
-      <i className="fab fa-facebook" aria-hidden="true"></i>
-    </a>
-    <a
-      href="#twitter"
-      className="block font-sans text-xl antialiased font-normal leading-relaxed text-transparent bg-gradient-to-tr from-light-blue-600 to-light-blue-400 bg-clip-text"
-    >
-      <i className="fab fa-twitter" aria-hidden="true"></i>
-    </a>
-    <a
-      href="#instagram"
-      className="block font-sans text-xl antialiased font-normal leading-relaxed text-transparent bg-gradient-to-tr from-purple-600 to-purple-400 bg-clip-text"
-    >
-      <i className="fab fa-instagram" aria-hidden="true"></i>
-    </a>
-  </div>
-</div>
+          <h1 className="text-center text-green-500 hover:underline text-4xl font-bold my-3">All Features Food</h1>
+          <div className="ml-10">
+          <Link to='showall'><button className="btn btn-secondary bg-green-500 text-white">See All <AiOutlineArrowRight></AiOutlineArrowRight> </button></Link>
+          </div>
+           <div className="grid md:grid-cols-3 gap-4">
+            {
+              fproducts?.slice(0,6).map(product=><AFeatured key={product._id} product={product}></AFeatured>)
+            }
+           </div>
+          
         </div>
     )}
 export default Featured;

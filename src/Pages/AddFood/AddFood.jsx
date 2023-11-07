@@ -32,8 +32,6 @@ const addfoods={
 }
 console.log(addfoods);
 console.log(user);
-
-
     // send data to the server
     fetch('http://localhost:5000/addfoods',{
       method:'POST',
