@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Search from "../../Components/Search/Search";
 import MainLayout from "../../MsinLayout/MainLayout";
 import useAuth from "../../Hooks/useAuth";
+import SProduct from "../../Components/SProduct/SProduct";
 
 const ShowAll = () => {
     const {user}=useAuth()
@@ -13,10 +14,11 @@ const ShowAll = () => {
         setName(name)
     }
     useEffect(()=>{
-        fetch(`http://localhost:5000/addfoods?foodname=${name}`)
+        fetch(`http://localhost:5000/addfoods?foodname=`)
         .then(res=>res.json())
         .then(data=>setProduct(data))
-    },[name,products])
+    },)
+    console.log(products);
     return(
         <div>
         <div className="navbar bg-green-400">
@@ -49,8 +51,10 @@ const ShowAll = () => {
     </div>
   </div>
 </div>
-       <div>
-
+       <div className="grid grid-cols-3">
+{
+    products?.map(product=><SProduct product={product} key={product._id}></SProduct>)
+}
        </div>
         </div>
     )}
