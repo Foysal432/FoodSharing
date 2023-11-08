@@ -7,6 +7,7 @@ import SProduct from "../../Components/SProduct/SProduct";
 const ShowAll = () => {
     const {user}=useAuth()
     const [name,setName]=useState()
+    console.log(name);
     const [products,setProduct]=useState()
     const handleserch=(e)=>{
         e.preventDefault()
@@ -17,7 +18,7 @@ const ShowAll = () => {
         fetch(`http://localhost:5000/addfoods?foodname=`)
         .then(res=>res.json())
         .then(data=>setProduct(data))
-    },)
+    },[name])
     console.log(products);
     return(
         <div>
@@ -51,7 +52,7 @@ const ShowAll = () => {
     </div>
   </div>
 </div>
-       <div className="grid grid-cols-3">
+       <div className="grid grid-cols-2 gap-4">
 {
     products?.map(product=><SProduct product={product} key={product._id}></SProduct>)
 }
