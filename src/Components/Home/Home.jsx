@@ -10,6 +10,7 @@ import 'swiper/css/pagination';
 // import required modules
 import { Pagination } from 'swiper/modules';
 import Featured from '../Featured/Featured';
+import OurMission from '../OurMission/OurMission';
 
 
 const Home = () => {
@@ -35,6 +36,9 @@ const Home = () => {
             </div>
         </div>
         <Featured></Featured>
+        <div>
+          <OurMission></OurMission>
+        </div>
         </div>
     );
 };
