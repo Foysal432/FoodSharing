@@ -39,7 +39,7 @@ const AFeatured = ({product}) => {
  <p>{additionalnotes}</p>
   </div>
 <div className="mt-4">
-<button className="btn btn-primary w-full">View Details</button>
+<button className="btn btn-primary w-full bg-green-400 text-white">View Details</button>
 </div>
 </div>
 

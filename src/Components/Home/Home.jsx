@@ -11,6 +11,7 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import Featured from '../Featured/Featured';
 import OurMission from '../OurMission/OurMission';
+import WhatWeAre from '../WhatWeAre/WhatWeAre';
 
 
 const Home = () => {
@@ -38,6 +39,9 @@ const Home = () => {
         <Featured></Featured>
         <div>
           <OurMission></OurMission>
+        </div>
+        <div className='mt-10'>
+          <WhatWeAre></WhatWeAre>
         </div>
         </div>
     );
