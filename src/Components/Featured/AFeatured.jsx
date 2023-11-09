@@ -1,6 +1,7 @@
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { CiLocationArrow1 } from "react-icons/ci";
 import { MdOutlineProductionQuantityLimits } from "react-icons/md";
+import { Link } from "react-router-dom";
 const AFeatured = ({product}) => {
 
     console.log(product);
@@ -39,7 +40,7 @@ const AFeatured = ({product}) => {
  <p>{additionalnotes}</p>
   </div>
 <div className="mt-4">
-<button className="btn btn-primary w-full bg-green-400 text-white">View Details</button>
+  <Link to={`/addfoods/${_id}`}><button className="btn btn-primary w-full bg-green-400 text-white">View Details</button></Link>
 </div>
 </div>
 

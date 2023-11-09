@@ -6,16 +6,18 @@ import SProduct from "../../Components/SProduct/SProduct";
 
 const ShowAll = () => {
     const {user}=useAuth()
-    const [name,setName]=useState()
+    const [name,setName]=useState('')
     console.log(name);
     const [products,setProduct]=useState()
     const handleserch=(e)=>{
         e.preventDefault()
         const name = e.target.name.value;
         setName(name)
+        console.log(name);
     }
+    
     useEffect(()=>{
-        fetch(`http://localhost:5000/addfoods?foodname=`)
+        fetch(`http://localhost:5000/addfoods?foodname=${name}`)
         .then(res=>res.json())
         .then(data=>setProduct(data))
     },[name])
@@ -29,8 +31,17 @@ const ShowAll = () => {
   <div className="flex-none gap-2">
     <div className="form-control">
       <form onSubmit={handleserch}>
-      <input name="name"  type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
-      <input type="submit" value="Submit" />
+      {/* <input name="name"  type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
+      <input type="submit"  value="Submit" /> */}
+      <select onChange={(e)=>{setName(e.target.value)}} className="select select-bordered w-full max-w-xs">
+  <option disabled selected>Search Your Food?</option>
+  <option value={''}>All</option>
+  {
+    products?.map(product=>
+      <option key={product._id} value={product.foodname}>{product.foodname}</option>)
+  }
+ 
+</select>
       </form>
     </div>
     <div className="dropdown dropdown-end">

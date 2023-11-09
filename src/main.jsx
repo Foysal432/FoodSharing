@@ -15,6 +15,7 @@ import { Toaster } from 'react-hot-toast';
 import AddFood from './Pages/AddFood/AddFood';
 import PrivateRoute from './Private/PrivateRoute';
 import ShowAll from './Pages/ShowAll/ShowAll';
+import SingleFood from './Components/SingleFood/SingleFood';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,12 +34,18 @@ const router = createBrowserRouter([
     element:<Register></Register>
   },
   {
-    path:'/addfood',
-    element:<PrivateRoute><AddFood></AddFood></PrivateRoute>
+    path:'/addfood/:id',
+    element:<PrivateRoute><AddFood></AddFood></PrivateRoute>,
+   
   },
   {
     path:'/showall',
     element:<ShowAll></ShowAll>
+  },
+  {
+    path:'/addfoods/:id',
+    element:<SingleFood></SingleFood>, 
+    loader:({params})=>fetch(`http://localhost:5000/addfoods/${params.id}`)
   }
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
