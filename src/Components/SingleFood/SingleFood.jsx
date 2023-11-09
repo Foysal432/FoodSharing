@@ -35,9 +35,11 @@ const SingleFood = () => {
 <button className="btn" onClick={()=>document.getElementById('my_modal_2').showModal()}>Request</button>
 <dialog id="my_modal_2" className="modal">
   <div className="modal-box">
-    <h3 className="font-bold text-lg">Hello!</h3>
-    <button className="btn">Request</button>
-    <p className="py-4">Press ESC key or click outside to close</p>
+  <input type="text" placeholder="Type here" className="input w-full max-w-xs" />
+  <input type="text" placeholder="Type here" className="input w-full max-w-xs" />
+  <input type="text" placeholder="Type here" className="input w-full max-w-xs" />
+  <input type="text" placeholder="Type here" className="input w-full max-w-xs" />
+  <input type="text" placeholder="Type here" className="input w-full max-w-xs" />
   </div>
   <form method="dialog" className="modal-backdrop">
     <button>close</button>
