@@ -35,11 +35,11 @@ const SingleFood = () => {
 <button className="btn" onClick={()=>document.getElementById('my_modal_2').showModal()}>Request</button>
 <dialog id="my_modal_2" className="modal">
   <div className="modal-box">
-  <input type="text" placeholder="Type here" className="input w-full max-w-xs" />
-  <input type="text" placeholder="Type here" className="input w-full max-w-xs" />
-  <input type="text" placeholder="Type here" className="input w-full max-w-xs" />
-  <input type="text" placeholder="Type here" className="input w-full max-w-xs" />
-  <input type="text" placeholder="Type here" className="input w-full max-w-xs" />
+  <input type="text" placeholder= {foodname} className="input w-full max-w-xs border bg-slate-200" />
+  <img className="w-1/3" src={foodimage} alt="" />
+  <input type="text" placeholder={_id} className="input w-full max-w-xs bg-slate-200" />
+  <input type="text" placeholder={email} className="input w-full max-w-xs  bg-slate-200 my-3" />
+  <input type="text" placeholder={donatorname} className="input w-full max-w-xs bg-slate-200" />
   </div>
   <form method="dialog" className="modal-backdrop">
     <button>close</button>

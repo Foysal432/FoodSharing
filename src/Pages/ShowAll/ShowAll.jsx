@@ -17,7 +17,7 @@ const ShowAll = () => {
     }
     
     useEffect(()=>{
-        fetch(`http://localhost:5000/addfoods?foodname=${name}`)
+        fetch(`https://foodsharing-delta.vercel.app/addfoods?foodname=${name}`)
         .then(res=>res.json())
         .then(data=>setProduct(data))
     },[name])

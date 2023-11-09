@@ -6,7 +6,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 const Featured = () => {
   const [fproducts,setFproduct]=useState()
   useEffect(()=>{
-    fetch('http://localhost:5000/addfoods?sortField=foodquantity&sortOrder=desc')
+    fetch('https://foodsharing-delta.vercel.app/addfoods?sortField=foodquantity&sortOrder=desc')
     .then(res=>res.json())
     .then(data=>setFproduct(data))
   },[])

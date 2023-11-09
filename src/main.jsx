@@ -45,7 +45,7 @@ const router = createBrowserRouter([
   {
     path:'/addfoods/:id',
     element:<PrivateRoute><SingleFood></SingleFood></PrivateRoute>, 
-    loader:({params})=>fetch(`http://localhost:5000/addfoods/${params.id}`)
+    loader:({params})=>fetch(`https://foodsharing-delta.vercel.app/addfoods/${params.id}`)
   }
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
