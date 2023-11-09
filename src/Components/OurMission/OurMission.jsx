@@ -6,7 +6,7 @@ const OurMission = () => {
                 <p className="text-center my-6 ">• Expand our network linking available sources of surplus food to those in need through existing charitable organizations.
                     • Grow our company in a manner that provides a level of profitability necessary to carry out our vision.</p>
             </div>
-            <div className="flex gap-3 items-center justify-center">
+            <div className="lg:flex gap-3 items-center justify-center">
                 <div className="flex-1">
                     <img src="https://i.ibb.co/Jy3QyXG/imagesmw-4.jpg" alt="" />
                     <h1 className="text-center">THE WASTE</h1>
