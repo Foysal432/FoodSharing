@@ -1,3 +1,5 @@
+import { AiOutlineClockCircle } from "react-icons/ai";
+import { MdOutlineProductionQuantityLimits } from "react-icons/md";
 import { useLoaderData } from "react-router-dom";
 
 const SingleFood = () => {
@@ -8,16 +10,29 @@ const SingleFood = () => {
     console.log(data);
     return(
         <div>
+             <div className="text-center font-bold text-2xl">
+                    <h1>Donar Information</h1>
+                    <h1>Name: {donatorname}</h1>
+                     <h1>Location: {pickuplocation}</h1>
+                </div>
              <div>
+               
              <div className="card lg:card-side bg-base-100 shadow-xl">
-  <figure><img src="/images/stock/photo-1494232410401-ad00d5433cfa.jpg" alt="Album"/></figure>
+  <figure><img className="w-1/2" src={foodimage} alt="Album"/></figure>
   <div className="card-body">
     <h2 className="card-title">{foodname}</h2>
-    <p>Click the button to listen on Spotiwhy app.</p>
+    <div className="flex items-center gap-2">
+        <MdOutlineProductionQuantityLimits className="text-green-400"></MdOutlineProductionQuantityLimits>
+    <p>{foodquantity}</p>
+    </div>
+    <div className="flex items-center gap-2">
+ <AiOutlineClockCircle className="text-green-400"></AiOutlineClockCircle>
+ <p>{expiredtime}</p>
+ </div>
     <div className="card-actions justify-end">
       {/* modal */}
       {/* Open the modal using document.getElementById('ID').showModal() method */}
-<button className="btn" onClick={()=>document.getElementById('my_modal_2').showModal()}>open modal</button>
+<button className="btn" onClick={()=>document.getElementById('my_modal_2').showModal()}>Request</button>
 <dialog id="my_modal_2" className="modal">
   <div className="modal-box">
     <h3 className="font-bold text-lg">Hello!</h3>
