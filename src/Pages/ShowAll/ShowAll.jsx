@@ -26,7 +26,7 @@ const ShowAll = () => {
         <div>
         <div className="navbar bg-green-400">
   <div className="flex-1">
-    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+    <a className="btn btn-ghost normal-case text-xl">Available Food</a>
   </div>
   <div className="flex-none gap-2">
     <div className="form-control">

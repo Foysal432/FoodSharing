@@ -11,7 +11,7 @@ const MainLayout = ({children}) => {
   }
     const MenuNav =<>
     <li><a><NavLink to='/' className={({isActive})=>isActive? "btn btn-outline btn-accent text-white font-serif":"btn btn-ghost font-serif"} >Home</NavLink></a></li>
-    <li><a><NavLink to='/availablefood' className={({isActive})=>isActive? "btn btn-outline btn-accent font-serif":"btn btn-ghost font-serif"}>Available Foods</NavLink></a></li>
+    <li><a><NavLink  to='showall' className={({isActive})=>isActive? "btn btn-outline btn-accent font-serif":"btn btn-ghost font-serif"}>Available Foods</NavLink></a></li>
     <li><a><NavLink to='addfood' className={({isActive})=>isActive? "btn btn-outline btn-accent font-serif":"btn btn-ghost font-serif"}>Add Food</NavLink></a></li>
     <li><a><NavLink to='managefood' className={({isActive})=>isActive? "btn btn-outline btn-accent font-sans":"btn btn-ghost font-serif"}>Manage My Foods</NavLink></a></li>
     <li><a><NavLink to='requestfood' className={({isActive})=>isActive? "btn btn-outline btn-accent font-serif":"btn btn-ghost font-serif"}>My Food Request</NavLink></a></li>

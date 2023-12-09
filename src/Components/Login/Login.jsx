@@ -39,14 +39,14 @@ const Login = () => {
 
     return (
       <div className="md:flex max-w-4xl mx-auto">
-        <div className="relative mt-10 flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border">
+        <div className="relative mt-10 flex flex-col text-gray-700 bg-white shadow-md lg:w-96 rounded-xl bg-clip-border">
         <div className="relative grid mx-4 mb-4 -mt-6 overflow-hidden text-white shadow-lg h-28 place-items-center rounded-xl bg-gradient-to-tr from-green-600 to-green-400 bg-clip-border shadow-green-500/40">
           <h3 className="block font-sans text-3xl antialiased font-semibold leading-snug tracking-normal text-white">
             Log In
           </h3>
         </div>
      <form onSubmit={handlelogin}>
-     <div className="flex flex-col gap-4 p-6">
+     <div className="flex flex-col gap-4 lg:p-6">
           <div className="relative h-11 w-full min-w-[200px]">
             <input
             name="email"
@@ -130,7 +130,7 @@ const Login = () => {
 </button>
   </div>
       </div>
-         <div className="w-1/2">
+         <div className="lg:w-1/2">
          <img src="https://i.ibb.co/GJQWnJ8/6310507.jpg" alt="" />
         </div>
         </div>

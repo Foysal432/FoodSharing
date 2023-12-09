@@ -63,7 +63,7 @@ console.log(user);
   
   <form onSubmit={handleaddfood} className="mt-8 mb-2 max-w-7xl mx-auto">
   <Link to='/'><button> <AiOutlineArrowLeft className="text-2xl my-2 text-green-500"></AiOutlineArrowLeft> </button></Link> 
-    <div className="mb-4 grid grid-cols-3 gap-6">
+    <div className="mb-4 grid lg:grid-cols-3 gap-6">
       <div className="relative h-11 w-full ">
         <input
         name="foodname"

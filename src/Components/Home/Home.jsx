@@ -12,6 +12,7 @@ import { Pagination } from 'swiper/modules';
 import Featured from '../Featured/Featured';
 import OurMission from '../OurMission/OurMission';
 import WhatWeAre from '../WhatWeAre/WhatWeAre';
+import Footer from '../Footer';
 
 
 const Home = () => {
@@ -19,7 +20,7 @@ const Home = () => {
       <div>
         <div className='mt-5 bg-green-400'>
             <div className="max-w-6xl mx-auto">
-         <div className='h-96'>
+         <div className='hidden lg:block h-96'>
          <Swiper
         pagination={{
           dynamicBullets: true,
@@ -42,6 +43,9 @@ const Home = () => {
         </div>
         <div className='mt-10'>
           <WhatWeAre></WhatWeAre>
+        </div>
+        <div className='mt-10'>
+          <Footer></Footer>
         </div>
         </div>
     );

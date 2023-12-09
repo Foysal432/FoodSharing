@@ -16,9 +16,14 @@ import AddFood from './Pages/AddFood/AddFood';
 import PrivateRoute from './Private/PrivateRoute';
 import ShowAll from './Pages/ShowAll/ShowAll';
 import SingleFood from './Components/SingleFood/SingleFood';
+import Error from './Components/Error';
+import ManageFood from './Pages/ManageFood/ManageFood';
+import Update from './Pages/Update/Update';
+import AvailavbleFood from './Pages/AvailableFood/AvailavbleFood';
 const router = createBrowserRouter([
   {
     path: "/",
+    errorElement:<Error></Error>,
     element: <Main></Main>,
     children:[{
       path:'/',
@@ -34,17 +39,28 @@ const router = createBrowserRouter([
     element:<Register></Register>
   },
   {
-    path:'/addfood/:id',
+    path:'/addfood',
     element:<PrivateRoute><AddFood></AddFood></PrivateRoute>,
    
   },
   {
     path:'/showall',
     element:<ShowAll></ShowAll>
+    // element:<AvailavbleFood></AvailavbleFood>
   },
   {
     path:'/addfoods/:id',
     element:<PrivateRoute><SingleFood></SingleFood></PrivateRoute>, 
+    loader:({params})=>fetch(`https://foodsharing-delta.vercel.app/addfoods/${params.id}`)
+  },
+  {
+    path:'/managefood',
+    element:<PrivateRoute><ManageFood></ManageFood></PrivateRoute>,
+    loader:()=>fetch('https://foodsharing-delta.vercel.app/addfoods')
+  },
+  {
+    path:'/update/:id',
+    element:<Update></Update>,
     loader:({params})=>fetch(`https://foodsharing-delta.vercel.app/addfoods/${params.id}`)
   }
 ]);
